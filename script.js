@@ -1,11 +1,8 @@
 function fibonacci(num) {
-  if (num === 0) {
-    return 0;
-  } else if (num === 1 || num === 2) {
-    return 1;
-  } else {
-    let prev = 1;
-    let curr = 1;
+	let prev=0, curr=1;
+	if(num==0) return prev;
+	if(num==1) return curr;
+  
     for (let i = 3; i <= num; i++) {
       let next = prev + curr;
       prev = curr;
@@ -13,7 +10,7 @@ function fibonacci(num) {
     }
     return curr;
   }
-}
+
 
 
 
