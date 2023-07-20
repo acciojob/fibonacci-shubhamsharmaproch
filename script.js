@@ -9,5 +9,6 @@ function fibonacci(num) {
 	}
 	return sum;
 }
+console.log(fibonacci(10));
 
 module.exports = fibonacci;
