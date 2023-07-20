@@ -1,14 +1,26 @@
 function fibonacci(num) {
- let num1=0; let num2=1; let sum=0;
-	for(let i=1;i<=num;i++) {
-		sum=num1+num2;
-		num1=num2;
-		num2=sum;
-		
-		
-	}
-	return sum;
+  if (num === 0) {
+    return 0;
+  } else if (num === 1 || num === 2) {
+    return 1;
+  } else {
+    let prev = 1;
+    let curr = 1;
+    for (let i = 3; i <= num; i++) {
+      let next = prev + curr;
+      prev = curr;
+      curr = next;
+    }
+    return curr;
+  }
 }
-console.log(fibonacci(10));
+
+
+
+
+
+
+
+
 
 module.exports = fibonacci;
